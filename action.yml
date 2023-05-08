@@ -21,5 +21,5 @@ runs:
     - run: |
         cd ${{ inputs.work_dir }}
         cp -R ${{ inputs.file }} ${{ inputs.to }}
-        ls -l
+        cd ${{ inputs.to }} && ls -l
       shell: bash
