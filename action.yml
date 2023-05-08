@@ -1,0 +1,25 @@
+name: "Copy File To"
+description: | 
+  "Este Actions facilita el copiado de archivos de un directorio a otro."
+# https://actions-cool.github.io/github-action-branding/
+branding:
+  icon: 'copy'
+  color: 'white'
+inputs:
+  work_dir:
+    description: 'Directorio del repositorio'
+    required: true
+  file:
+    description: 'Archivo a copiar'
+    required: true
+  to:
+    description: 'Destino del archivo'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - run: |
+        cd ${{ inputs.work_dir }}
+        cp -R ${{ inputs.file }} ${{ inputs.to }}
+        ls -l
+      shell: bash
