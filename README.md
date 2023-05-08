@@ -4,7 +4,7 @@ Actions para copiar archivos.
 
 ## ¿Copy file to?
 
-Este Actions facilita el copiado de archivos de un directorio a tro.
+Este Actions facilita el copiado de archivos de un directorio a otro.
 
 ## Prerrequisitos
 
