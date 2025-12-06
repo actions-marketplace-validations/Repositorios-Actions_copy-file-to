@@ -10,7 +10,7 @@ Este Actions facilita el copiado de archivos de un directorio a otro.
 
 Se debe indicar con la etiqueta 'with' algunos parametros.
 
-1. Archivo a copiar.
+1. Archivo a copiar
 2. Directorio destino
 
 ## Instrucciones
@@ -20,7 +20,7 @@ Se debe indicar con la etiqueta 'with' algunos parametros.
 Ejemplo:
 
 <p align="center">
-  <img width="671" height="61" alt="action" src="public/img/action.PNG">
+  <img width="630" height="61" alt="action" src="public/img/action.PNG">
 </p>
 
 2. Pega en tu workflow y añade la etiqueta with: añadiendo los parametros: "work_dir" y "artifact_name".
@@ -28,18 +28,13 @@ Ejemplo:
 Ejemplo:
 
 <p align="center">
-  <img width="667" height="149" alt="action_with" src="public/img/action_with.PNG">
+  <img width="630" height="149" alt="action_with" src="public/img/action_with.PNG">
 </p>
 
-Se debe indicar el valores que corresponden. Nota: se puedes colocar los valores directos otra forma de trabajar es variabilizar los valores.
-
-Ejemplo 2:
-
-<p align="center">
-  <img width="654" height="150" alt="action_with_variables" src="public/img/action_with_variables.PNG">
-</p>
+Se debe indicar el valores que corresponden. 
 
 ## Ejecución por consola
 
-1. mkdir -p work_dir/artifact_name
-2. cd work_dir && ls -l
+1. cd ${{ inputs.work_dir }}
+2. cp -R ${{ inputs.file }} ${{ inputs.to }}
+3. cd ${{ inputs.to }} && ls -l
